@@ -36,5 +36,26 @@ const Wrapper = styled.section`
   .searchField {
     margin-left: auto;
   }
+
+  /* @media only screen and(min-width: 360px) {
+    .dashbaord-outlet {
+      height: 100rem;
+    }
+  }
+  @media only screen and(min-width: 480px) {
+    .dashbaord-outlet {
+      height: 100rem;
+    }
+  }
+  @media only screen and (min-width: 992px) {
+    .dashbaord-outlet {
+      height: 100vh;
+    }
+  }
+  @media (min-width: 1400px) {
+    .dashbaord-outlet {
+      height: 50rem;
+    }
+  } */
 `;
 export default Wrapper;
