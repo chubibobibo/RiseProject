@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Wrapper = styled.button`
   border-radius: 50px;
-  width: 5rem;
+  width: 2rem;
   height: 2rem;
   background-color: #2f3541;
   margin: 1rem;

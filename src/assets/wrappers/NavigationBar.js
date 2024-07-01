@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 const Wrapper = styled.nav`
+  /** layout and styling for the whole NavigationBar component */
+  /** navbar takes the whole width of the screen */
   margin: 0;
   height: 4rem;
   display: flex;
@@ -10,6 +12,8 @@ const Wrapper = styled.nav`
   background: #252932;
   width: 100vw;
   position: sticky;
+
+  /** layout of the navbar icons to move to the left */
   .nav {
     display: flex;
     align-items: center;
@@ -17,11 +21,13 @@ const Wrapper = styled.nav`
     margin-right: auto;
   }
 
+  /** layout for the icons to move to the right */
   .nav-right {
     display: flex;
     margin-left: auto;
   }
 
+  /** styling the userAvatar** style for the buttons used in the sidebar/** */
   .toggle-btn {
     background: transparent;
     border-color: transparent;
@@ -32,6 +38,7 @@ const Wrapper = styled.nav`
     align-items: center;
   }
 
+  /** styling the userAvatar and it's username*/
   .userAvatar {
     border-radius: 40px;
     width: 3rem;

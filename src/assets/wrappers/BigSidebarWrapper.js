@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+/** wrapper for the whole component of the bigsidebar */
+/** Big sidebar needs to be a column and should have a scroll if overflowing */
 const Wrapper = styled.aside`
   display: flex;
   flex-direction: column;
@@ -10,6 +12,7 @@ const Wrapper = styled.aside`
   overflow-y: scroll; /** scroll side bar on overflow */
   /* position: absolute; */
 
+  /** styling the buttons used in the sidebar */
   .toggle-btn {
     background: transparent;
     border-color: transparent;
