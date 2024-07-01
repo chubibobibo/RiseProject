@@ -1,120 +1,28 @@
 import { Link } from "react-router-dom";
-
-import { BsSuitcaseLg } from "react-icons/bs";
-import { SlScreenDesktop } from "react-icons/sl";
-import { CiCalendar } from "react-icons/ci";
-import { BiCategory } from "react-icons/bi";
-
 import Wrapper from "../assets/wrappers/BigSidebarWrapper.js";
+
+/** Contains an array of objects used as links for the sidebar */
+import { bigSideBarLinks } from "../utils/BigSideBarLinks.jsx";
 
 function BigSidebarComponent() {
   return (
+    /**
+     * Imported and mapped a jsx file (bigSideBarLinks.jsx) that contains
+     * an array of objects having the path, icons, and label of each of the
+     * links used in the BigSidebarComponent.
+     */
     <Wrapper>
-      <Link>
-        <button type='button' className='toggle-btn'>
-          <SlScreenDesktop /> <p>Dashboard</p>
-        </button>
-      </Link>
-      <Link>
-        <button type='button' className='toggle-btn'>
-          <CiCalendar /> <p>Events</p>
-        </button>
-      </Link>
-      <Link>
-        <button type='button' className='toggle-btn'>
-          <BsSuitcaseLg /> <p>Clients</p>
-        </button>
-      </Link>
-      <Link>
-        <button type='button' className='toggle-btn'>
-          <BiCategory />
-          <p>Projects</p>
-        </button>
-      </Link>
-      <Link>
-        <button type='button' className='toggle-btn'>
-          <BsSuitcaseLg />
-          <p>Tasks</p>
-        </button>
-      </Link>
-      <Link>
-        <button type='button' className='toggle-btn'>
-          <BsSuitcaseLg />
-          <p>Leads</p>
-        </button>
-      </Link>
-      <Link>
-        <button type='button' className='toggle-btn'>
-          <BsSuitcaseLg />
-          <p>Subscription</p>
-        </button>
-      </Link>
-      <Link>
-        <button type='button' className='toggle-btn'>
-          <BsSuitcaseLg />
-          <p>Sales</p>
-        </button>
-      </Link>
-      <Link>
-        <button type='button' className='toggle-btn'>
-          <BsSuitcaseLg />
-          <p>Prospects</p>
-        </button>
-      </Link>
-      <Link>
-        <button type='button' className='toggle-btn'>
-          <BsSuitcaseLg />
-          <p>Notes</p>
-        </button>
-      </Link>
-      <Link>
-        <button type='button' className='toggle-btn'>
-          <BsSuitcaseLg />
-          <p>Messages</p>
-        </button>
-      </Link>
-      <Link>
-        <button type='button' className='toggle-btn'>
-          <BsSuitcaseLg />
-          <p>Team</p>
-        </button>
-      </Link>
-      <Link>
-        <button type='button' className='toggle-btn'>
-          <BsSuitcaseLg />
-          <p>Tickets</p>
-        </button>
-      </Link>
-      <Link>
-        <button type='button' className='toggle-btn'>
-          <BsSuitcaseLg />
-          <p>Expenses</p>
-        </button>
-      </Link>
-      <Link>
-        <button type='button' className='toggle-btn'>
-          <BsSuitcaseLg />
-          <p>Reports</p>
-        </button>
-      </Link>
-      <Link>
-        <button type='button' className='toggle-btn'>
-          <BsSuitcaseLg />
-          <p>Files</p>
-        </button>
-      </Link>
-      <Link>
-        <button type='button' className='toggle-btn'>
-          <BsSuitcaseLg />
-          <p>Help and Support</p>
-        </button>
-      </Link>
-      <Link>
-        <button type='button' className='toggle-btn'>
-          <BsSuitcaseLg />
-          <p>Settings </p>
-        </button>
-      </Link>
+      {bigSideBarLinks.map((newLinks) => {
+        return (
+          <div key={newLinks.label}>
+            <Link to={newLinks.path} style={{ textDecoration: "none" }}>
+              <button type='button' className='toggle-btn'>
+                {newLinks.icon} <p>{newLinks.label}</p>
+              </button>
+            </Link>
+          </div>
+        );
+      })}
     </Wrapper>
   );
 }

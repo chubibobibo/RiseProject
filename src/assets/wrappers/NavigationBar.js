@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const Wrapper = styled.nav`
+  margin: 0;
   height: 4rem;
   display: flex;
   align-items: center;
@@ -8,7 +9,7 @@ const Wrapper = styled.nav`
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
   background: #252932;
   width: 100vw;
-
+  position: sticky;
   .nav {
     display: flex;
     align-items: center;
@@ -40,11 +41,6 @@ const Wrapper = styled.nav`
     margin: 1rem;
     color: #5b73e8;
   }
-
-  /** logo in the navbar */
-  /* .logoImg {
-    margin-right: auto; /** move th icon to the left */
-  } */
 
   @media (min-width: 992px) {
     position: sticky;

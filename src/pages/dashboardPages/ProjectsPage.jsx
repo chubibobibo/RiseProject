@@ -1,4 +1,10 @@
+/** Styled component import that wraps around components to apply styles */
+import Wrapper from "../../assets/wrappers/EventPageWrapper.js";
 function ProjectsPage() {
-  return <div>ProjectsPage</div>;
+  return (
+    <Wrapper>
+      <span style={{ color: "white", fontSize: "50px" }}>Projects Page</span>
+    </Wrapper>
+  );
 }
 export default ProjectsPage;
