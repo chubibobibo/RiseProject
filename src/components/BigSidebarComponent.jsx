@@ -17,7 +17,8 @@ function BigSidebarComponent() {
           <div key={newLinks.label}>
             <Link to={newLinks.path} style={{ textDecoration: "none" }}>
               <button type='button' className='toggle-btn'>
-                {newLinks.icon} <p>{newLinks.label}</p>
+                {newLinks.icon}{" "}
+                <p style={{ marginLeft: "0.5rem" }}>{newLinks.label}</p>
               </button>
             </Link>
           </div>

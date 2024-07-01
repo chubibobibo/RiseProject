@@ -7,8 +7,6 @@ const Wrapper = styled.div`
 
   .container {
     padding: 2rem;
-    /* margin-left: 1rem; */
-    /* overflow-x: scroll; */
   }
 
   .table-container {

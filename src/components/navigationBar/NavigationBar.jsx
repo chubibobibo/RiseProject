@@ -1,5 +1,6 @@
 /** Importing logo */
 import Logo from "./Logo";
+/** Importing the styled components */
 import Wrapper from "../../assets/wrappers/NavigationBar";
 
 /** imported the component for the menu items in the navbar */
