@@ -14,13 +14,15 @@ function DashboardLayout() {
   const DashboardContext = createContext();
 
   return (
+    /** main container will need to be flex */
+    /** container for the bog and small sidebar component  will need to be grid that will have columns*/
     <Wrapper>
       <main className='dashboard'>
-        {/* <SmallSidebarComponent /> */}
-        <BigSidebarComponent />
+        <NavigationBar />
         <div>
-          <div>
-            <NavigationBar />
+          <div className='dashboard-outlet'>
+            <BigSidebarComponent />
+            <SmallSidebarComponent />
             <Outlet />
           </div>
         </div>

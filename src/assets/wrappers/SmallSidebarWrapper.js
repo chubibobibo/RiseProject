@@ -4,7 +4,7 @@ const Wrapper = styled.aside`
   /* @media (min-width: 992px) {
     display: none;
   } */
-  .sidebar-container {
+  /* .sidebar-container {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.7);
@@ -66,6 +66,6 @@ const Wrapper = styled.aside`
   }
   .active {
     color: white;
-  }
+  } */
 `;
 export default Wrapper;

@@ -8,6 +8,7 @@ import RegisterPage from "./pages/authPages/RegisterPage";
 import HomeLayout from "./pages/HomeLayout";
 import DashboardLayout from "./pages/DashboardLayout";
 import ErrorPageComponent from "./components/ErrorPageComponent";
+import EventsPage from "./pages/dashboardPages/EventsPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -27,7 +28,12 @@ function App() {
         {
           path: "dashboard",
           element: <DashboardLayout />,
-          children: [],
+          children: [
+            {
+              path: "events",
+              element: <EventsPage />,
+            },
+          ],
         },
       ],
     },
