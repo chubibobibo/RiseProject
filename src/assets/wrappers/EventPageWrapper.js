@@ -11,8 +11,8 @@ const Wrapper = styled.div`
 
   .table-container {
     max-width: 100vw;
-    height: 50rem;
     background-color: #2f3541;
+    height: 20rem;
     border-radius: 5px;
     overflow-x: scroll;
   }
@@ -23,6 +23,31 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: start;
     /* padding: 1rem; */
+  }
+
+  @media only screen and(min-width: 360px) {
+    .table-container {
+      height: 30rem;
+      overflow-x: scroll;
+    }
+  }
+  @media only screen and(min-width: 480px) {
+    .table-container {
+      height: 30rem;
+      overflow-x: scroll;
+    }
+  }
+  @media only screen and (min-width: 992px) {
+    .table-container {
+      height: 20rem;
+      overflow-x: scroll;
+    }
+  }
+  @media (min-width: 2000px) {
+    .table-container {
+      height: 50rem;
+      overflow-x: scroll;
+    }
   }
 `;
 
