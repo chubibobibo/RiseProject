@@ -9,6 +9,9 @@ import HomeLayout from "./pages/HomeLayout";
 import DashboardLayout from "./pages/DashboardLayout";
 import ErrorPageComponent from "./components/ErrorPageComponent";
 import EventsPage from "./pages/dashboardPages/EventsPage";
+import ClientPage from "./pages/dashboardPages/ClientPage";
+import ProjectsPage from "./pages/dashboardPages/ProjectsPage";
+import DashboardIndexPage from "./pages/dashboardPages/DashboardIndexPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -26,12 +29,28 @@ function App() {
           element: <RegisterPage />,
         },
         {
+          /**
+           * Children components of DashboardLayout are rendered using <Outlet>
+           * Outlet components have their path relative to the parent component (DashboardLayout)
+           * */
           path: "dashboard",
           element: <DashboardLayout />,
           children: [
             {
+              index: true,
+              element: <DashboardIndexPage />,
+            },
+            {
               path: "events",
               element: <EventsPage />,
+            },
+            {
+              path: "clients",
+              element: <ClientPage />,
+            },
+            {
+              path: "projects",
+              element: <ProjectsPage />,
             },
           ],
         },
