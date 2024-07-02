@@ -7,7 +7,7 @@ const Wrapper = styled.aside`
   flex-direction: column;
   box-shadow: 1px 0px 0px 0px rgba(0, 0, 0, 0.1);
   background: #252932;
-  width: 20rem;
+  width: 15rem;
   height: 94vh;
   overflow-y: scroll; /** scroll side bar on overflow */
   /* position: absolute; */

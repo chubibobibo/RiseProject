@@ -37,7 +37,7 @@ const Wrapper = styled.section`
     margin-left: auto;
   }
 
-  /* @media only screen and(min-width: 360px) {
+  @media only screen and(min-width: 360px) {
     .dashbaord-outlet {
       height: 100rem;
     }
@@ -56,6 +56,6 @@ const Wrapper = styled.section`
     .dashbaord-outlet {
       height: 50rem;
     }
-  } */
+  }
 `;
 export default Wrapper;
