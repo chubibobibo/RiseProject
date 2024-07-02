@@ -33,7 +33,7 @@ const Wrapper = styled.div`
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 4fr;
     width: 100vw;
-    span {
+    .span-header {
       margin: 10px;
       font-size: 25px;
     }

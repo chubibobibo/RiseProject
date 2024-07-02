@@ -10,8 +10,10 @@ import { TempTasks } from "../../utils/TempTasks.jsx";
 import FilterButtons from "../../components/buttons/FilterButtons.jsx";
 import FilterIconButtons from "../../components/buttons/FilterIconButtons.jsx";
 import SearchInputField from "../../components/inputFields/SearchInputField.jsx";
+/** import of component that displays each task */
 import TaskElements from "../../components/tasksElements/TaskElements.jsx";
 
+/**react icons */
 import { BsExclamationCircle } from "react-icons/bs";
 import { FaArrowUp } from "react-icons/fa";
 import { RxPerson } from "react-icons/rx";
@@ -45,23 +47,23 @@ function DashboardIndexPage() {
           {/* contains header for the element boxes */}
           <div className='content-header'>
             <div className='column-header'>
-              <span>To Do</span>
-              <span>7</span>
+              <span className='span-header'>To Do</span>
+              <span className='span-header'>7</span>
               <div className='column-color-yellow'></div>
             </div>
             <div className='column-header'>
-              <span>In Progress</span>
-              <span>5</span>
+              <span className='span-header'>In Progress</span>
+              <span className='span-header'>5</span>
               <div className='column-color-blue'></div>
             </div>
             <div className='column-header'>
-              <span>Review</span>
-              <span>8</span>
+              <span className='span-header'>Review</span>
+              <span className='span-header'>8</span>
               <div className='column-color-purple'></div>
             </div>
             <div className='column-header'>
-              <span>Done</span>
-              <span>9</span>
+              <span className='span-header'>Done</span>
+              <span className='span-header'>9</span>
               <div className='column-color-cyan'></div>
             </div>
             {/* container for each column element of the boxes*/}
@@ -94,35 +96,31 @@ function DashboardIndexPage() {
             </div>
             {/* container for each column element of the boxes*/}
             <div className='content-column'>
-              <div className='content-element'>
-                {/* mapped imported TempTasks which is an array of objects containing tasks and categories   */}
-                {/* for every iteration of the items, render the TaskElements component and provide props */}
-                {TempTasks.map((newTempTasks, idx) => {
-                  return (
-                    <TaskElements
-                      task={newTempTasks.task}
-                      category={newTempTasks.category}
-                      key={idx}
-                    />
-                  );
-                })}
-              </div>
+              {/* mapped imported TempTasks which is an array of objects containing tasks and categories   */}
+              {/* for every iteration of the items, render the TaskElements component and provide props */}
+              {TempTasks.map((newTempTasks, idx) => {
+                return (
+                  <TaskElements
+                    task={newTempTasks.task}
+                    category={newTempTasks.category}
+                    key={idx}
+                  />
+                );
+              })}
             </div>
             {/* container for each column element of the boxes*/}
             <div className='content-column'>
-              <div className='content-element'>
-                {/* mapped imported TempTasks which is an array of objects containing tasks and categories   */}
-                {/* for every iteration of the items, render the TaskElements component and provide props */}
-                {TempTasks.map((newTempTasks, idx) => {
-                  return (
-                    <TaskElements
-                      task={newTempTasks.task}
-                      category={newTempTasks.category}
-                      key={idx}
-                    />
-                  );
-                })}
-              </div>
+              {/* mapped imported TempTasks which is an array of objects containing tasks and categories   */}
+              {/* for every iteration of the items, render the TaskElements component and provide props */}
+              {TempTasks.map((newTempTasks, idx) => {
+                return (
+                  <TaskElements
+                    task={newTempTasks.task}
+                    category={newTempTasks.category}
+                    key={idx}
+                  />
+                );
+              })}
             </div>
           </div>
         </div>
