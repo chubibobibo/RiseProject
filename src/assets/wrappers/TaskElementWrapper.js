@@ -72,6 +72,24 @@ const Wrapper = styled.div`
     justify-content: center;
     margin: 1rem;
   }
+
+  .priority-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-left: 1rem;
+  }
+
+  .priority {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightcoral;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100px;
+    color: white;
+  }
 `;
 
 export default Wrapper;

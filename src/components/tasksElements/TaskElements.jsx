@@ -3,6 +3,8 @@ import Wrapper from "../../assets/wrappers/TaskElementWrapper.js";
 /** Useravatar to display to each of the tasks */
 import UserAvatar from "../../components/navigationBar/UserAvatar.jsx";
 
+import { AiOutlineExclamationCircle } from "react-icons/ai";
+
 function TaskElements({ task, avatar, category }) {
   return (
     <Wrapper>
@@ -14,7 +16,17 @@ function TaskElements({ task, avatar, category }) {
           </span>
           <span>{task}</span>
         </div>
-        <div className={category}>{category}</div>
+        <div className='priority-container'>
+          <span className='priority'>
+            <AiOutlineExclamationCircle />
+          </span>
+          <span
+            className={category}
+            style={{ textTransform: "capitalize", padding: "5px" }}
+          >
+            {category}
+          </span>
+        </div>
       </div>
     </Wrapper>
   );
