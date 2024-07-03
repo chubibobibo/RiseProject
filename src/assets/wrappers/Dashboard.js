@@ -5,6 +5,9 @@ const Wrapper = styled.section`
   display: grid;
   grid-template-columns: 0fr 2fr;
   grid-template-rows: 0fr;
+  /* grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 4fr;
+  grid-template-areas: "navbar navbar" "sidebar outlet"; */
   height: 100vh;
   width: 100vw;
 
@@ -12,6 +15,7 @@ const Wrapper = styled.section`
     /* display: inline-block; */
     grid-column-start: span 2;
     grid-row-start: 1;
+    /* grid-area: navabar navbar; */
     /* width: 100vw; */
     position: relative;
   }
@@ -22,6 +26,7 @@ const Wrapper = styled.section`
     /* position: absolute; */
     grid-column-start: 1;
     grid-row-start: 2;
+    /* grid-area: sidebar; */
     /* display: grid; */
     /* grid-template-columns: 0fr 1fr; * sets the size of each columns */
     /* width: 100vw;
@@ -37,6 +42,7 @@ const Wrapper = styled.section`
   .outlet-container {
     grid-column-start: 2;
     grid-row-start: 2;
+    /* grid-area: outlet; */
     height: 20rem;
     min-width: 100vh;
   }
