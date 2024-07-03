@@ -19,17 +19,15 @@ function DashboardLayout() {
     /** div for the big and small sidebar component  will need to be grid that will have columns*/
     /** renders the NavigationBar, BigSidebar, SmallSidebar and child components of DashboardLayout*/
     <Wrapper>
-      <main className='dashboard'>
+      <div className='dashboard'>
         <NavigationBar />
-        <div className='dashboard-outlet'>
-          <div>
-            <BigSidebarComponent />
-          </div>
-          <div className='outlet-container'>
-            <Outlet />
-          </div>
-        </div>
-      </main>
+      </div>
+      <div className='dashboard-bigsidebar'>
+        <BigSidebarComponent />
+      </div>
+      <div className='outlet-container'>
+        <Outlet />
+      </div>
     </Wrapper>
   );
 }

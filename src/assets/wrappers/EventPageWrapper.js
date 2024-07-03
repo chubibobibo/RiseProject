@@ -9,15 +9,6 @@ const Wrapper = styled.div`
     padding: 2rem;
   }
 
-  .table-container {
-    max-width: 100vw;
-    background-color: #2f3541;
-    height: 20rem;
-    border-radius: 5px;
-    overflow-y: hidden;
-    overflow-x: scroll;
-  }
-
   .button-row {
     background-color: #252932;
     height: 4rem;
@@ -26,22 +17,32 @@ const Wrapper = styled.div`
     /* width: 100vw; */
     /* padding: 1rem; */
   }
+  .table-container {
+    max-width: 100%;
+    background-color: #2f3541;
+    height: 20rem;
+    border-radius: 5px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+  }
 
   /** row for the contents of the dashboard */
   .content-header {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 4fr;
-    width: 100vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
     .span-header {
       margin: 10px;
-      font-size: 25px;
+      font-size: 20px;
     }
   }
   .column-header {
     /* border: 1px solid black; */
     border-radius: 3px;
     margin: 1rem;
+    margin-right: 3rem;
+    margin-left: 2rem;
     background-color: #252932;
     color: #898fa9;
     padding: 4px;
@@ -49,6 +50,7 @@ const Wrapper = styled.div`
     grid-template-columns: 1fr 0fr;
     grid-template-rows: 1fr;
     align-items: center;
+    justify-content: center;
   }
 
   /** Colored line under column header */
@@ -128,7 +130,7 @@ const Wrapper = styled.div`
   }
   @media only screen and (min-width: 992px) {
     .table-container {
-      height: 20rem;
+      height: 24rem;
     }
   }
   @media (min-width: 2000px) {
