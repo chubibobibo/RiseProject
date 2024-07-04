@@ -1,7 +1,7 @@
 /** Styled component import that wraps around components to apply styles */
 import Wrapper from "../../assets/wrappers/EventPageWrapper.js";
 
-import UserAvatar from "../../components/navigationBar/UserAvatar.jsx";
+// import UserAvatar from "../../components/navigationBar/UserAvatar.jsx";
 import { useState } from "react";
 
 /** Temporary data to display tasks */
@@ -22,12 +22,12 @@ import { RxPerson } from "react-icons/rx";
 import { MdOutlineWbSunny } from "react-icons/md";
 import { FaSearch } from "react-icons/fa";
 
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 function DashboardIndexPage() {
   /** State to open and close modal dialog component */
   const [isOpen, setIsOpen] = useState({ open: false, taskId: "" });
-  /** onClick event handlet to set the isOPen state to true */
+  /** onClick event handle to set the isOPen state to true */
   /** This will render the TaskModal component visible */
   const handleClick = (id) => {
     setIsOpen({ open: true, taskId: id });

@@ -14,7 +14,7 @@ function ErrorPageComponent() {
         {error.status === 404 ? (
           <img src='../src/assets/images/404.png' alt='' className='errorImg' />
         ) : (
-          <p>Something went wrong</p>
+          <p>Something went wrong {error.stack}</p>
         )}
       </div>
       <div className='linkHome'>

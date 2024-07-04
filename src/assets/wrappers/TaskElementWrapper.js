@@ -22,8 +22,7 @@ const Wrapper = styled.div`
     background-color: #252932;
     margin: 10px;
     border-radius: 5px;
-    /* margin-right: 2rem;
-    margin-left: 1rem; */
+    cursor: pointer;
   }
 
   .each-element {
@@ -34,12 +33,13 @@ const Wrapper = styled.div`
     margin: 2px;
     span {
       margin-left: 1rem;
+      /* width: 10rem; */
     }
   }
 
   .userAvatar {
-    height: 2rem;
-    width: 2rem;
+    height: 3rem;
+    width: 3rem;
     border-radius: 100px;
   }
 

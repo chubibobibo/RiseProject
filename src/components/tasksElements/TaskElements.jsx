@@ -1,13 +1,13 @@
 /** Styled component to wrap around */
 import Wrapper from "../../assets/wrappers/TaskElementWrapper.js";
-/** Useravatar to display to each of the tasks */
+/** UserAvatar to display to each of the tasks */
 import UserAvatar from "../../components/navigationBar/UserAvatar.jsx";
 
-// import { useState } from "react";
+/** Temporary data to display tasks */
 
 import { AiOutlineExclamationCircle } from "react-icons/ai";
 
-function TaskElements({ task, avatar, category, click }) {
+function TaskElements({ task, category, click }) {
   /** State to handle the rendering of the modal when a task is clicked */
   // const [isOpen, setIsOpen] = useState(false);
   return (
@@ -18,7 +18,7 @@ function TaskElements({ task, avatar, category, click }) {
           <span className='userAvatar'>
             <UserAvatar />
           </span>
-          <span>{task}</span>
+          <span style={{ fontSize: "25px" }}>{task}</span>
         </div>
         <div className='priority-container'>
           <span className='priority'>

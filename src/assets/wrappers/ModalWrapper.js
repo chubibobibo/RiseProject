@@ -20,13 +20,17 @@ const Wrapper = styled.div`
   }
 
   .modal {
-    width: 40rem;
-    height: 15rem;
+    width: 60rem;
+    height: 40rem;
     background: #2f3541;
 
     z-index: 10;
-    border-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 2px;
   }
 
   .modalHeader {
@@ -82,13 +86,13 @@ const Wrapper = styled.div`
     right: 0;
     top: 0;
     align-self: flex-end;
-    margin-top: -7px;
-    margin-right: -7px;
+    margin-top: 3px;
+    margin-right: 4px;
   }
 
   .closeBtn:hover {
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
-    transform: translate(-4px, 4px);
+    transform: translate(4px, -4px);
   }
 
   .deleteBtn {
@@ -127,6 +131,37 @@ const Wrapper = styled.div`
     box-shadow: none;
     transform: none;
     background: whitesmoke;
+  }
+
+  .content-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .modal-content {
+    padding: 10px;
+    font-size: 22px;
+    color: #7c8fa9;
+    text-align: left;
+    .userAvatar {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+  }
+
+  .author-container {
+    display: flex;
+  }
+
+  .userAvatar {
+    max-width: 5rem;
+    height: 5rem;
+    border-radius: 50px;
+    margin-top: 0.5rem;
+  }
+
+  .add-item-input {
+    width: 30rem;
   }
 `;
 
