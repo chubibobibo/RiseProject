@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Wrapper = styled.section`
-  /** Layout for the navigationbar to take up the whole width of the screen */
+  /** Layout for the navigationBar to take up the whole width of the screen */
   display: grid;
   grid-template-columns: 0fr 2fr;
   grid-template-rows: 0fr;
@@ -15,14 +15,14 @@ const Wrapper = styled.section`
     /* display: inline-block; */
     grid-column-start: span 2;
     grid-row-start: 1;
-    /* grid-area: navabar navbar; */
+    /* grid-area: navbar navbar; */
     /* width: 100vw; */
     position: relative;
   }
 
   /** layout for the BigSideBar component to have a grid layout */
-  /** grid layout will allow us to make 2 cloumns for the bigsidebar and the outlet components */
-  .dashboard-bigsidebar {
+  /** grid layout will allow us to make 2 columns for the bigSidebar and the outlet components */
+  .dashboard-bigSidebar {
     /* position: absolute; */
     grid-column-start: 1;
     grid-row-start: 2;
@@ -52,22 +52,22 @@ const Wrapper = styled.section`
   }
 
   @media only screen and(min-width: 360px) {
-    .dashbaord-outlet {
+    .dashboard-outlet {
       height: 100rem;
     }
   }
   @media only screen and(min-width: 480px) {
-    .dashbaord-outlet {
+    .dashboard-outlet {
       height: 100rem;
     }
   }
   @media only screen and (min-width: 992px) {
-    .dashbaord-outlet {
+    .dashboard-outlet {
       height: 100vh;
     }
   }
   @media (min-width: 1400px) {
-    .dashbaord-outlet {
+    .dashboard-outlet {
       height: 50rem;
     }
   }

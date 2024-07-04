@@ -10,7 +10,7 @@ html,
 
 /** Modification for the appearance of scrollbar*/
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 9px;
 }
 
 ::-webkit-scrollbar-track {

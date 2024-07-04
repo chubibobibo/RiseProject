@@ -1,7 +1,7 @@
 /** Styled component import that wraps around components to apply styles */
 import Wrapper from "../../assets/wrappers/EventPageWrapper.js";
 
-import UserAvatar from "../../components/navigationBar/UserAvatar.jsx";
+// import UserAvatar from "../../components/navigationBar/UserAvatar.jsx";
 import { useState } from "react";
 
 /** Temporary data to display tasks */
@@ -22,12 +22,12 @@ import { RxPerson } from "react-icons/rx";
 import { MdOutlineWbSunny } from "react-icons/md";
 import { FaSearch } from "react-icons/fa";
 
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 function DashboardIndexPage() {
   /** State to open and close modal dialog component */
   const [isOpen, setIsOpen] = useState({ open: false, taskId: "" });
-  /** onClick event handlet to set the isOPen state to true */
+  /** onClick event handle to set the isOPen state to true */
   /** This will render the TaskModal component visible */
   const handleClick = (id) => {
     setIsOpen({ open: true, taskId: id });
@@ -39,8 +39,10 @@ function DashboardIndexPage() {
         <h2 style={{ color: "white" }}>Tasks</h2>
         {/* dynamically renders the TaskModal component depending on the state of isOpen */}
         {/* at the same time passes setIsOpen as props to be able to set the state in TaskModal */}
-        {/* passed isOpen state to as argument to obtain id of task needed to display data*/}
-        {isOpen && <TaskModal setIsOpen={setIsOpen} isOpen={isOpen} />}
+        {/* NOTE: Use isOpen.open for conditional rendering because it is an object. 
+        Otherwise modal will be active every render of the component */}
+        {/* passed isOpen state as argument to obtain id of task needed to display data*/}
+        {isOpen.open && <TaskModal setIsOpen={setIsOpen} isOpen={isOpen} />}
         {/* column of navigation buttons */}
         <div className='button-row'>
           <FilterButtons label={"All Tasks"} type={"button"} />
@@ -124,7 +126,9 @@ function DashboardIndexPage() {
                     task={newTempTasks.task}
                     category={newTempTasks.category}
                     key={idx}
-                    click={handleClick}
+                    click={() => {
+                      handleClick(newTempTasks.id);
+                    }}
                   />
                 );
               })}
@@ -139,7 +143,9 @@ function DashboardIndexPage() {
                     task={newTempTasks.task}
                     category={newTempTasks.category}
                     key={idx}
-                    click={handleClick}
+                    click={() => {
+                      handleClick(newTempTasks.id);
+                    }}
                   />
                 );
               })}
