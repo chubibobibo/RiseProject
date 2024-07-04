@@ -17,19 +17,13 @@ function TaskModal({ isOpen, setIsOpen }) {
   const [filteredData, setFilteredData] = useState({});
 
   /** filtering the array of temp tasks for a specific task using the id that was passed as props in isOpen state. */
-  const data = isOpen.taskId;
-  //   const filterTask = () => {
-  //     return TempTasks.filter((newTask) => {
-  //       //   console.log(newTask);
-  //       //   console.log(typeof newTask.id);
-  //       const a = newTask.id !== "1";
-  //       console.log(a);
-  //     });
-  //   };
+  const taskData = isOpen.taskId;
 
+  /** filter the array of objects that contains our temporary data for all tasks then set the state that will contain
+   * the filtered task using useEffect for every render */
   useEffect(() => {
     const newData = TempTasks.filter((newTasks) => {
-      return newTasks.id === data;
+      return newTasks.id === taskData;
     });
     const filteredTasks = () => {
       //   console.log(newData);
@@ -37,8 +31,6 @@ function TaskModal({ isOpen, setIsOpen }) {
     };
     filteredTasks();
   }, []);
-
-  console.log(filteredData[0]?.task);
 
   return (
     /** onClick event uses anonymous function because we are providing an argument to the setIsOpen state*/

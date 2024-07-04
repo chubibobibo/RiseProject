@@ -1,59 +1,58 @@
-import { v4 as uuidv4 } from "uuid";
-const uuid = uuidv4();
+import { v4 as uuid } from "uuid";
 
 export const TempTasks = [
   {
-    id: uuid,
+    id: uuid(),
     task: "Collaborate with designers",
     category: "design",
   },
   {
-    id: uuid,
+    id: uuid(),
     task: "Design new cover layout",
     category: "design",
   },
   {
-    id: uuid,
+    id: uuid(),
     task: "Add new website content",
     category: "enhancement",
   },
   {
-    id: uuid,
+    id: uuid(),
     task: "Backup website data",
     category: "enhancement",
   },
   {
-    id: uuid,
+    id: uuid(),
     task: "Fix layout errors in HOme page",
     category: "bug",
   },
   {
-    id: uuid,
+    id: uuid(),
     task: "Fix fetching of data in the pages",
     category: "bug",
   },
   {
-    id: uuid,
+    id: uuid(),
     task: "Add new functionalities",
     category: "enhancement",
   },
   {
-    id: uuid,
+    id: uuid(),
     task: "Create a new button for submitting",
     category: "design",
   },
   {
-    id: uuid,
+    id: uuid(),
     task: "Fix layout errors",
     category: "bug",
   },
   {
-    id: uuid,
+    id: uuid(),
     task: "Track and measure blog posts",
     category: "enhancement",
   },
   {
-    id: uuid,
+    id: uuid(),
     task: "Create new data in the database",
     category: "enhancement",
   },
