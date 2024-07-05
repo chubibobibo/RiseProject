@@ -12,6 +12,7 @@ import EventsPage from "./pages/dashboardPages/EventsPage";
 import ClientPage from "./pages/dashboardPages/ClientPage";
 import ProjectsPage from "./pages/dashboardPages/ProjectsPage";
 import DashboardTaskPage from "./pages/dashboardPages/DashboardTaskPage";
+import DashboardIndexPage from "./pages/dashboardPages/DashboardIndexPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -35,10 +36,16 @@ function App() {
            * */
           path: "dashboard",
           element: <DashboardLayout />,
+          errorElement: <ErrorPageComponent />,
           children: [
             {
               index: true,
               element: <DashboardTaskPage />,
+            },
+            {
+              path: "view-dashboard",
+              errorElement: <ErrorPageComponent />,
+              element: <DashboardIndexPage />,
             },
             {
               path: "events",

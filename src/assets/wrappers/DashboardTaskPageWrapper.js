@@ -1,15 +1,20 @@
 import styled from "styled-components";
 
+/** Wraps around the the DashboardTaskPage to implement styles */
 const Wrapper = styled.div`
   /* width: 100vw; */
   background-color: #1c1f26;
   height: 94vh;
   width: 100%;
+
+  /** container for the main navbar */
+  /** takes up the whole width of the page */
   .container {
     padding: 2rem;
     /* height: 20rem; */
   }
 
+  /** Contains the buttons, icons and user avatar */
   .button-row {
     background-color: #252932;
     height: 4rem;
