@@ -8,6 +8,12 @@ function TextAreaInputField() {
         placeholder='Comment'
         className='comment-input'
       />
+      <div>
+        <button>Upload File</button>
+      </div>
+      <div>
+        <button>Post Comment</button>
+      </div>
     </Wrapper>
   );
 }

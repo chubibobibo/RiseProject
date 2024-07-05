@@ -85,12 +85,41 @@ function TaskModal({ isOpen, setIsOpen }) {
                 <TextAreaInputField />
               </div>
             </div>
-            {/** Container for the details of the author of the task  */}
+            {/** Container for the details of the author of the task  (right side)*/}
             <div className='author-container'>
               <div className='userAvatar'>
                 <UserAvatar />
+                <span className='author-name'>John Doe</span>
               </div>
-              <span>John Doe</span>
+              {/** container for the details on the author located below the avatar and name of author*/}
+              <div className='author-details-container'>
+                <p className='author-details'>Milestone : Beta Release</p>
+                <p className='author-details'>Start Date : Add Start date</p>
+                <p className='author-details'>Start Deadline : 15-05-2014</p>
+                <p className='author-details'>Priority: Critical</p>
+                <p className='author-details'>Label: Feedback</p>
+                <p className='author-details'>
+                  Collaborators: Add Collaborators
+                </p>
+                <button>Start Timer</button>
+                <p className='author-details'>Total time logged : 00:00:00</p>
+                <p className='author-details'>Reminders (Private):</p>
+                <p className='author-details'>Add Reminder</p>
+              </div>
+            </div>
+          </div>
+          {/** activities container */}
+          <hr />
+          <div className='activity-header'>
+            <p style={{ color: " #668F9F" }}>Activity</p>
+          </div>
+          <div className='activities-container'>
+            <div className='user-avatar-activities'>
+              <UserAvatar />
+              <p className='author-name'>John Doe</p>
+            </div>
+            <div>
+              <p className='author-name'>{filteredData[0]?.task}</p>
             </div>
           </div>
         </div>
