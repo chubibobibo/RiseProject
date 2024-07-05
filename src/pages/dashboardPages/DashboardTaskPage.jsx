@@ -1,5 +1,5 @@
 /** Styled component import that wraps around components to apply styles */
-import Wrapper from "../../assets/wrappers/EventPageWrapper.js";
+import Wrapper from "../../assets/wrappers/DashboardTaskPageWrapper.js";
 
 /** handles state for activating task modal and id of a specific tasks. */
 import { useState } from "react";
@@ -22,7 +22,7 @@ import { RxPerson } from "react-icons/rx";
 import { MdOutlineWbSunny } from "react-icons/md";
 import { FaSearch } from "react-icons/fa";
 
-function DashboardIndexPage() {
+function DashboardTaskPage() {
   /** State to open and close modal dialog component */
   const [isOpen, setIsOpen] = useState({ open: false, taskId: "" });
   /** onClick event handle to set the isOPen state to true */
@@ -155,4 +155,4 @@ function DashboardIndexPage() {
     </Wrapper>
   );
 }
-export default DashboardIndexPage;
+export default DashboardTaskPage;

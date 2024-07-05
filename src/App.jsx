@@ -11,7 +11,7 @@ import ErrorPageComponent from "./components/ErrorPageComponent";
 import EventsPage from "./pages/dashboardPages/EventsPage";
 import ClientPage from "./pages/dashboardPages/ClientPage";
 import ProjectsPage from "./pages/dashboardPages/ProjectsPage";
-import DashboardIndexPage from "./pages/dashboardPages/DashboardIndexPage";
+import DashboardTaskPage from "./pages/dashboardPages/DashboardTaskPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -38,7 +38,7 @@ function App() {
           children: [
             {
               index: true,
-              element: <DashboardIndexPage />,
+              element: <DashboardTaskPage />,
             },
             {
               path: "events",
