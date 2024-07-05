@@ -12,7 +12,6 @@ import BigSidebarComponent from "../components/BigSidebarComponent.jsx";
 
 function DashboardLayout() {
   /** Create context to pass data to components */
-  const DashboardContext = createContext();
 
   return (
     /** main container will need to be display flex */
@@ -22,7 +21,7 @@ function DashboardLayout() {
       <div className='dashboard'>
         <NavigationBar />
       </div>
-      <div className='dashboard-bigsidebar'>
+      <div className='dashboard-bigSidebar'>
         <BigSidebarComponent />
       </div>
       <div className='outlet-container'>
