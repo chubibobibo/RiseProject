@@ -7,15 +7,7 @@ const Wrapper = styled.div`
   width: 100%;
   .container {
     padding: 2rem;
-  }
-
-  .table-container {
-    max-width: 100vw;
-    background-color: #2f3541;
-    height: 20rem;
-    border-radius: 5px;
-    overflow-y: hidden;
-    overflow-x: scroll;
+    /* height: 20rem; */
   }
 
   .button-row {
@@ -26,22 +18,33 @@ const Wrapper = styled.div`
     /* width: 100vw; */
     /* padding: 1rem; */
   }
+  .table-container {
+    max-width: 100%;
+    background-color: #2f3541;
+    min-height: 30em;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+  }
 
   /** row for the contents of the dashboard */
   .content-header {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 4fr;
-    width: 100vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
     .span-header {
       margin: 10px;
-      font-size: 25px;
+      font-size: 20px;
     }
   }
   .column-header {
     /* border: 1px solid black; */
     border-radius: 3px;
     margin: 1rem;
+    margin-right: 3rem;
+    margin-left: 2rem;
     background-color: #252932;
     color: #898fa9;
     padding: 4px;
@@ -49,6 +52,11 @@ const Wrapper = styled.div`
     grid-template-columns: 1fr 0fr;
     grid-template-rows: 1fr;
     align-items: center;
+    justify-content: center;
+
+    .span-header {
+      font-size: 25px;
+    }
   }
 
   /** Colored line under column header */
@@ -77,7 +85,7 @@ const Wrapper = styled.div`
   .content-column {
     display: flex;
     flex-direction: column;
-    height: 25rem;
+    height: 20rem;
     border-radius: 3px;
     margin: 1rem;
     background-color: #2f3541;
@@ -87,32 +95,6 @@ const Wrapper = styled.div`
     /* grid-template-columns: repeat(4, 1fr); */
     overflow-x: hidden;
   }
-  /* 
-  .content-element {
-    display: flex;
-    flex-direction: column;
-    min-width: 20rem;
-    background-color: #252932;
-    margin: 2px;
-    border-radius: 5px;
-  } */
-
-  /* .each-element {
-    height: 5rem;
-    width: 15rem;
-    display: flex;
-    align-items: center;
-    margin: 2px;
-    span {
-      margin-left: 1rem;
-    }
-  } */
-  /* 
-  .userAvatar {
-    height: 2rem;
-    width: 2rem;
-    border-radius: 100px;
-  } */
 
   /** Responsive for small screens */
 
@@ -126,14 +108,14 @@ const Wrapper = styled.div`
       height: 30rem;
     }
   }
-  @media only screen and (min-width: 992px) {
+  @media (min-width: 992px) {
     .table-container {
-      height: 20rem;
+      height: 24rem;
     }
   }
   @media (min-width: 2000px) {
     .table-container {
-      height: 50rem;
+      height: 40rem;
     }
   }
 `;

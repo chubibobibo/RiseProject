@@ -1,7 +1,8 @@
 /** Styled component import that wraps around components to apply styles */
 import Wrapper from "../../assets/wrappers/EventPageWrapper.js";
 
-import UserAvatar from "../../components/navigationBar/UserAvatar.jsx";
+/** handles state for activating task modal and id of a specific tasks. */
+import { useState } from "react";
 
 /** Temporary data to display tasks */
 import { TempTasks } from "../../utils/TempTasks.jsx";
@@ -12,6 +13,7 @@ import FilterIconButtons from "../../components/buttons/FilterIconButtons.jsx";
 import SearchInputField from "../../components/inputFields/SearchInputField.jsx";
 /** import of component that displays each task */
 import TaskElements from "../../components/tasksElements/TaskElements.jsx";
+import TaskModal from "../../components/tasksElements/TaskModal.jsx";
 
 /**react icons */
 import { BsExclamationCircle } from "react-icons/bs";
@@ -20,13 +22,25 @@ import { RxPerson } from "react-icons/rx";
 import { MdOutlineWbSunny } from "react-icons/md";
 import { FaSearch } from "react-icons/fa";
 
-import { Link } from "react-router-dom";
-
 function DashboardIndexPage() {
+  /** State to open and close modal dialog component */
+  const [isOpen, setIsOpen] = useState({ open: false, taskId: "" });
+  /** onClick event handle to set the isOPen state to true */
+  /** This will render the TaskModal component visible */
+  const handleClick = (id) => {
+    setIsOpen({ open: true, taskId: id });
+  };
+  // console.log(isOpen.taskId);
   return (
     <Wrapper>
       <div className='container'>
         <h2 style={{ color: "white" }}>Tasks</h2>
+        {/* dynamically renders the TaskModal component depending on the state of isOpen */}
+        {/* at the same time passes setIsOpen as props to be able to set the state in TaskModal */}
+        {/* NOTE: isOpen.open for conditional rendering. Otherwise modal will be active every render of the component */}
+
+        {/* passed isOpen state as argument to obtain id of task needed to display data*/}
+        {isOpen.open && <TaskModal setIsOpen={setIsOpen} isOpen={isOpen} />}
         {/* column of navigation buttons */}
         <div className='button-row'>
           <FilterButtons label={"All Tasks"} type={"button"} />
@@ -76,6 +90,9 @@ function DashboardIndexPage() {
                     task={newTempTasks.task}
                     category={newTempTasks.category}
                     key={idx}
+                    click={() => {
+                      handleClick(newTempTasks.id);
+                    }}
                   />
                 );
               })}
@@ -90,6 +107,9 @@ function DashboardIndexPage() {
                     task={newTempTasks.task}
                     category={newTempTasks.category}
                     key={idx}
+                    click={() => {
+                      handleClick(newTempTasks.id);
+                    }}
                   />
                 );
               })}
@@ -104,6 +124,9 @@ function DashboardIndexPage() {
                     task={newTempTasks.task}
                     category={newTempTasks.category}
                     key={idx}
+                    click={() => {
+                      handleClick(newTempTasks.id);
+                    }}
                   />
                 );
               })}
@@ -118,6 +141,9 @@ function DashboardIndexPage() {
                     task={newTempTasks.task}
                     category={newTempTasks.category}
                     key={idx}
+                    click={() => {
+                      handleClick(newTempTasks.id);
+                    }}
                   />
                 );
               })}
