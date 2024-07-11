@@ -11,20 +11,22 @@ import Wrapper from "../../assets/wrappers/ModalWrapper.js";
 
 /** Import the temporary tasks (will be replaced by data from an API) */
 import { TempTasks } from "../../utils/TempTasks.jsx";
+import { useState, useEffect, useContext } from "react";
+/**  context created in the parent component */
+import { DashboardTaskContext } from "../../pages/dashboardPages/DashboardTaskPage.jsx";
 
-import { useState, useEffect } from "react";
-
-/** modal will receive props when it's opened */
-/** This will allow rendering it dynamically */
-/** receives the state (isOpen setIsOpen) as props to display data of each tasks*/
-function TaskModal({ isOpen, setIsOpen }) {
+function TaskModal() {
   /** Create a state to manage the filtered data */
   const [filteredData, setFilteredData] = useState({});
 
-  /** filtering the array of temp tasks for a specific task using the id that was passed as props in isOpen state. */
-  const taskData = isOpen.taskId;
+  /** obtaining data from context */
+  const data = useContext(DashboardTaskContext);
 
-  /** filter the array of objects that contains our temporary data for all tasks then set the state that will contain
+  /** save the taskId from context to a variable*/
+  const taskData = data.isOpen.taskId;
+
+  /** filter the array of objects that contains our temporary data for all tasks that is equal to the
+   * id(taskData) received from context then set the state that will contain
    * the filtered task using useEffect for every render */
   useEffect(() => {
     const newData = TempTasks.filter((newTasks) => {
@@ -40,17 +42,16 @@ function TaskModal({ isOpen, setIsOpen }) {
   return (
     /** onClick event uses anonymous function because we are providing an argument to the setIsOpen state*/
     <Wrapper>
-      {/* using setIsOpen that was passed as argument from DashboardIndexPage so 
-      we can use it to close the modal by setting isOpen to false*/}
+      {/* using setIsOpen from context data to close the modal by setting isOpen to false*/}
       {/* setting setIsOpen in a div separate from the modal to close it when clicking outside the modal component */}
-      <div className='darkBG' onClick={() => setIsOpen(false)}></div>
+      <div className='darkBG' onClick={() => data.setIsOpen(false)}></div>
       <div className='centered'>
         <div className='modalHeader'>
           <h5 className='heading'>{filteredData[0]?.task}</h5>
         </div>
         <div className='modal'>
           {/* button to close */}
-          <button className='closeBtn' onClick={() => setIsOpen(false)}>
+          <button className='closeBtn' onClick={() => data.setIsOpen(false)}>
             <RiCloseLine style={{ marginBottom: "-3px" }} />
           </button>
           {/** container for the task details */}

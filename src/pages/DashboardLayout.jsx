@@ -1,6 +1,5 @@
 /**  outlet to render all the child components of dashboard layout */
 import { Outlet } from "react-router-dom";
-import { createContext } from "react"; /** context to pass data to components using it's provider */
 
 /** Styled components wraps around components to apply styles.*/
 import Wrapper from "../assets/wrappers/Dashboard.js";
@@ -12,7 +11,6 @@ import BigSidebarComponent from "../components/BigSidebarComponent.jsx";
 
 function DashboardLayout() {
   /** Create context to pass data to components */
-  const DashboardContext = createContext();
 
   return (
     /** main container will need to be display flex */
@@ -22,7 +20,7 @@ function DashboardLayout() {
       <div className='dashboard'>
         <NavigationBar />
       </div>
-      <div className='dashboard-bigsidebar'>
+      <div className='dashboard-bigSidebar'>
         <BigSidebarComponent />
       </div>
       <div className='outlet-container'>

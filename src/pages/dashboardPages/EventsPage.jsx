@@ -1,5 +1,5 @@
 /** Styled component import that wraps around components to apply styles */
-import Wrapper from "../../assets/wrappers/EventPageWrapper.js";
+import Wrapper from "../../assets/wrappers/DashboardTaskPageWrapper.js";
 
 function EventsPage() {
   return (
