@@ -13,6 +13,7 @@ import ClientPage from "./pages/dashboardPages/ClientPage";
 import ProjectsPage from "./pages/dashboardPages/ProjectsPage";
 import DashboardTaskPage from "./pages/dashboardPages/DashboardTaskPage";
 import DashboardIndexPage from "./pages/dashboardPages/DashboardIndexPage";
+import ClientPageClient from "./components/clientPageElements/ClientPageClient";
 
 function App() {
   const router = createBrowserRouter([
@@ -58,6 +59,10 @@ function App() {
             {
               path: "projects",
               element: <ProjectsPage />,
+            },
+            {
+              path: "clients-clients",
+              element: <ClientPageClient />,
             },
           ],
         },

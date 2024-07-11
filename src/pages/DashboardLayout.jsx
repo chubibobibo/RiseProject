@@ -1,6 +1,5 @@
 /**  outlet to render all the child components of dashboard layout */
 import { Outlet } from "react-router-dom";
-import { createContext } from "react"; /** context to pass data to components using it's provider */
 
 /** Styled components wraps around components to apply styles.*/
 import Wrapper from "../assets/wrappers/Dashboard.js";

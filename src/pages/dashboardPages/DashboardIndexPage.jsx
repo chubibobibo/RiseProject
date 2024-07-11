@@ -1,35 +1,35 @@
 /** Styled component import that wraps around components to apply styles */
 import Wrapper from "../../assets/wrappers/DashboardIndexPageWrapper.js";
 /**React icon imports to be used in the icon boxes */
-import { FaRegClock } from "react-icons/fa";
-
-import { createContext } from "react";
-
-/** Import components to be rendered */
-import IconBoxes from "../../components/dashboardIndexPageElements/IconBoxes.jsx";
-export const iconStyleContext = createContext();
+import { FaRegClock, FaRegCompass } from "react-icons/fa";
+import { CiCalendar, CiMenuBurger } from "react-icons/ci";
 
 function DashboardIndexPage() {
   return (
     <Wrapper>
-      DashboardIndexPage
-      <iconStyleContext.Provider value={{ icon: <FaRegClock size={"3rem"} /> }}>
+      <div className='top-row'>
         <div className='page-header'>Dashboard</div>
-        <div className='top-row'>
-          <div className='top-row-boxes'>
-            <IconBoxes />
-          </div>
-          <div className='top-row-boxes'>
-            <IconBoxes />
-          </div>
-          <div className='top-row-boxes'>
-            <IconBoxes />
-          </div>
-          <div className='top-row-boxes'>
-            <IconBoxes />
+        <div className='top-clock-in'>
+          <div className='icon-clock-in-container'>
+            <FaRegClock size={"3rem"} color={"white"} />
           </div>
         </div>
-      </iconStyleContext.Provider>
+        <div className='top-open-tasks'>
+          <div className='icon-open-task-container'>
+            <CiMenuBurger size={"3rem"} color={"white"} />
+          </div>
+        </div>
+        <div className='top-event-today'>
+          <div className='icon-top-event-container'>
+            <CiCalendar size={"3rem"} color={"white"} />
+          </div>
+        </div>
+        <div className='top-due'>
+          <div className='icon-due-container'>
+            <FaRegCompass size={"3rem"} color={"white"} />
+          </div>
+        </div>
+      </div>
     </Wrapper>
   );
 }

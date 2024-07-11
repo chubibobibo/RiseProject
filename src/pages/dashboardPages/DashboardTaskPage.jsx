@@ -56,9 +56,9 @@ function DashboardTaskPage() {
           {/* dynamically renders the TaskModal component depending on the state of isOpen */}
           {/* at the same time passes setIsOpen as props to be able to set the state in TaskModal component */}
           {/* NOTE: isOpen.open for conditional rendering. Otherwise modal will be active every render of the component */}
-
           {/* passed isOpen state as argument to obtain id of task needed to display data*/}
           {isOpen.open && <TaskModal />}
+
           {/* column of navigation buttons */}
           <div className='button-row'>
             <FilterButtons label={"All Tasks"} type={"button"} />

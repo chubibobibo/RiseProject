@@ -17,7 +17,8 @@ const Wrapper = styled.section`
     grid-row-start: 1;
     /* grid-area: navbar navbar; */
     /* width: 100vw; */
-    position: relative;
+    /* position: relative; */
+    /* overflow-wrap: normal; */
   }
 
   /** layout for the BigSideBar component to have a grid layout */
@@ -44,7 +45,8 @@ const Wrapper = styled.section`
     grid-row-start: 2;
     /* grid-area: outlet; */
     height: 20rem;
-    min-width: 100vh;
+    min-width: 100%;
+    overflow-wrap: normal;
   }
 
   .searchField {
