@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   background-color: #252932;
+  border-radius: 5px;
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr;
@@ -17,6 +18,7 @@ const Wrapper = styled.div`
     max-width: 50%;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+
     .links {
       text-decoration: none;
       color: white;
@@ -32,6 +34,7 @@ const Wrapper = styled.div`
     justify-content: end;
     gap: 1rem;
     margin: 1.5rem;
+    margin-left: 30rem;
     max-width: 50%;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
