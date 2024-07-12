@@ -18,7 +18,9 @@ function ClientPageHeader() {
           </Link>
         </div>
         <div>
-          <Link className='links'>Contacts</Link>
+          <Link to='/dashboard/clients-contacts' className='links'>
+            Contacts
+          </Link>
         </div>
       </div>
       <div className='client-buttons'>
