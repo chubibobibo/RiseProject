@@ -22,11 +22,18 @@ const Wrapper = styled.div`
     .links {
       text-decoration: none;
       color: white;
+      padding-bottom: 20px;
     }
   }
 
   .links:hover {
-    color: blue;
+    color: lightblue;
+    border-bottom: 5px solid lightblue;
+  }
+
+  .links:focus {
+    color: lightblue;
+    border-bottom: 5px solid lightblue;
   }
 
   .client-buttons {
