@@ -26,6 +26,11 @@ export const bigSideBarLinks = [
     label: "Projects",
   },
   {
+    path: "/dashboard/tasks",
+    icon: <BiCategory />,
+    label: "Tasks",
+  },
+  {
     path: "/dashboard/leads",
     icon: <BiCategory />,
     label: "Leads",

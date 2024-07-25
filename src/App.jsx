@@ -15,6 +15,7 @@ import DashboardTaskPage from "./pages/dashboardPages/DashboardTaskPage";
 import DashboardIndexPage from "./pages/dashboardPages/DashboardIndexPage";
 import ClientPageClient from "./components/clientPageElements/ClientPageClient";
 import ClientPageContacts from "./components/clientPageElements/ClientPageContacts";
+import TasksPage from "./pages/dashboardPages/TasksPage";
 
 function App() {
   const router = createBrowserRouter([
@@ -54,12 +55,16 @@ function App() {
               element: <EventsPage />,
             },
             {
-              path: "clients",
-              element: <ClientPage />,
-            },
-            {
               path: "projects",
               element: <ProjectsPage />,
+            },
+            {
+              path: "tasks",
+              element: <TasksPage />,
+            },
+            {
+              path: "clients",
+              element: <ClientPage />,
             },
             {
               path: "clients-clients",
