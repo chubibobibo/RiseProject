@@ -74,7 +74,7 @@ const Wrapper = styled.div`
         align-items: center;
         width: 4rem;
         height: 4rem;
-        background-color: yellow;
+        background-color: orange;
         border-radius: 5px;
       }
       .icon-description {
@@ -152,7 +152,7 @@ const Wrapper = styled.div`
         align-items: center;
         width: 4rem;
         height: 4rem;
-        background-color: lightblue;
+        background-color: teal;
         border-radius: 5px;
       }
       .icon-description {

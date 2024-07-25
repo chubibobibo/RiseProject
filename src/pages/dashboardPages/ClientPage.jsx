@@ -2,6 +2,8 @@
 import Wrapper from "../../assets/wrappers/ClientPageWrapper.js";
 
 import { PiSuitcase } from "react-icons/pi";
+import { SlPeople } from "react-icons/sl";
+import { FiCheckSquare } from "react-icons/fi";
 
 /** import components to be rendered */
 import ClientPageHeader from "../../components/clientPageElements/ClientPageHeader.jsx";
@@ -25,7 +27,7 @@ function ClientPage() {
         </div>
         <div className='client-contacts'>
           <div className='box-icon-container-yellow'>
-            <PiSuitcase size={"3rem"} color={"white"} />
+            <SlPeople size={"3rem"} color={"white"} />
           </div>
           <div className='icon-description'>
             <p>50</p>
@@ -34,7 +36,7 @@ function ClientPage() {
         </div>
         <div className='contacts-logged'>
           <div className='box-icon-container-blue'>
-            <PiSuitcase size={"3rem"} color={"white"} />
+            <FiCheckSquare size={"3rem"} color={"white"} />
           </div>
           <div className='icon-description'>
             <p>1</p>
@@ -43,7 +45,7 @@ function ClientPage() {
         </div>
         <div className='contacts-logged7'>
           <div className='box-icon-container-blue'>
-            <PiSuitcase size={"3rem"} color={"white"} />
+            <FiCheckSquare size={"3rem"} color={"white"} />
           </div>
           <div className='icon-description'>
             <p>1</p>
