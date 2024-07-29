@@ -17,6 +17,9 @@ import ClientPageClient from "./components/clientPageElements/ClientPageClient";
 import ClientPageContacts from "./components/clientPageElements/ClientPageContacts";
 import TasksPage from "./pages/dashboardPages/TasksPage";
 
+/** action functions */
+import { action as loginAction } from "./pages/authPages/LoginPage";
+
 function App() {
   const router = createBrowserRouter([
     {
@@ -27,6 +30,7 @@ function App() {
         {
           path: "login",
           element: <LoginPage />,
+          action: loginAction,
         },
         {
           path: "register",
